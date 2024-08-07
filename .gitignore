@@ -1,0 +1,9 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# Python files
+*.pyc
+__pycache__/
