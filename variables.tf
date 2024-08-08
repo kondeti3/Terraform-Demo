@@ -12,3 +12,8 @@ variable "api_key" {
   description = "The API key to store in Secrets Manager"
   type        = string
 }
+
+variable "lambda_role_arn" {
+  description = "The ARN of the Lambda execution role"
+  type        = string
+}
