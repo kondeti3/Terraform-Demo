@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "welcome_lambda" {
-  function_name    = "welcomeLambda"
+  function_name    = "welcomeLambda-${terraform.workspace}"
   role             = var.lambda_role_arn
   handler          = "welcome_lambda.lambda_handler"
   runtime          = "python3.8"
@@ -8,7 +8,7 @@ resource "aws_lambda_function" "welcome_lambda" {
 }
 
 resource "aws_lambda_function" "greeting_lambda" {
-  function_name    = "greetingLambda"
+  function_name    = "greetingLambda-${terraform.workspace}"
   role             = var.lambda_role_arn
   handler          = "greeting_lambda.lambda_handler"
   runtime          = "python3.8"
